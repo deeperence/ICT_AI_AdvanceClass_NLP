@@ -16,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/0305_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1560">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="169">
+              <caret line="92" column="103" lean-forward="true" selection-start-line="92" selection-start-column="103" selection-end-line="92" selection-end-column="103" />
               <folding>
                 <element signature="e#68#99#0" expanded="true" />
               </folding>
@@ -145,8 +145,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/0305_main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1560">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="169">
+          <caret line="92" column="103" lean-forward="true" selection-start-line="92" selection-start-column="103" selection-end-line="92" selection-end-column="103" />
           <folding>
             <element signature="e#68#99#0" expanded="true" />
           </folding>
