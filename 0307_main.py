@@ -131,16 +131,22 @@ def postDownload(url, param=None, retries = 3):
 
 
 # --------------------------------- 공공데이터포털에서 실시간 대기오염정보 받아오기 --------------------------------------------
+# 실시간 대기정보 받아오는 함수
+def getAirKorea(url, param):
+    html = getDownload(url, param)
+    result = json.loads(html.text)
+    # 작성중...
+
 
 # '공공데이터포털'의 '대기오염정보 조회 서비스'에서 '시도별 실시간 측정정보 조회'에 '서울'넣고 json으로 받아오기.
 # 주소 뒤에 &_returnType=json를 넣어서 json형식으로 요청한 후 파싱하면 대기 정보를 실시간으로 얻어올 수 있다.
-# ? 까지가 사이트 주소, 그 뒤로 이어지는 내용들이 파라미터임.
+# ? 까지가 사이트 주소, 그 뒤로 이어지는 내용들을 파라미터로 활용하면 됨.
 SeoulAirUrl = "http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty"
 param = {"serviceKey":"9XtVuLvOwav9xyTaj3A%2BPJo%2BHv9%2BdRZtmY0%2B05eFMYE6UcSlE%2Be%2B9T2Qd5KH1Uh9TxUMAQgInmZjqZEyhb9F7A%3D%3D", "numOfRows":10, "pageNo":1, "sidoName":"서울", "ver":"1.3", "_returnType":"json"}
 
 # get방식으로 데이터를 주고받으면 아스키코드가 아닌것을 자동으로 헥사바이트코드와 %가 붙도록 인코딩한다. 따라서 SERVICE KEY IS NOT REGISTERED ERROR가 발생.
 # 처음 받은 서비스 key가 깨진 상태이기 때문에 올바른 정보를 받아올 수 없는 상태. (UTF-8로 인코딩된 서비스키를 이미 제공하고 있는데, 또 인코딩해서 발생하는 에러)
-# SeoulAir_html = getDownload(SeoulAirUrl, param)
+# SeoulAir_html = getDownload(SeoulAirUrl, param) # 개발자도구를 통해 SeoulAirUrl 페이지의 request method를 확인해보면 GET으로 주고받기 때문에 get method로 받아오는 것.
 # print(SeoulAir_html.text)
 
 # 따라서 인코딩을 안시키고 서비스를 보내던가, 디코딩을 한 후 다시 get방식으로 보내는 방법 두 가지가 있다. (urllib의 parse를 활용하거나 requests.utils.unquote활용. )
@@ -149,15 +155,34 @@ param = {"serviceKey":"9XtVuLvOwav9xyTaj3A%2BPJo%2BHv9%2BdRZtmY0%2B05eFMYE6UcSlE
 # print(parse.quote(parse.unquote(param["serviceKey"])))
 
 # 그러나 urilib의 parse를 사용하는 것은 여러모로 불필요하므로, requests의 unquote 사용.
-param["serviceKey"] = requests.utils.unquote(param["serviceKey"])
-FinalHtml = getDownload(SeoulAirUrl, param)
-# print(FinalHtml.text) #json으로 받아오므로, 이것을 api 기술문서를 참조해 해석하고 딕셔너리로 바꾸면 됨. 그 전에 오브젝트화를 시켜야 하는데, json 패키지를 사용하면 됨.
+# param["serviceKey"] = requests.utils.unquote(param["serviceKey"])
+# FinalHtml = getDownload(SeoulAirUrl, param)
+# print(FinalHtml.text) # json으로 받아오므로, 이것을 api 기술문서를 참조해 해석하고 딕셔너리로 바꾸면 됨. 그 전에 오브젝트화를 시켜야 하는데, json 패키지를 사용하면 됨.
 
-APIresult = json.loads(FinalHtml.text) #이미 값들이 메모리에 올라가 있을때는loads를 사용.
+# APIresult = json.loads(FinalHtml.text) # 이미 값들이 메모리에 올라가 있을때는loads를 사용.
 # print(len(APIresult["list"])) # row를 10개 가져옴을 알 수 있음.
-for row in APIresult["list"]: #데이터의 개수가 10개보다 적을때(마지막 페이지)까지 가져옴. (또는 list에 none객체가 나오거나, length가 0이거나, key value가 없을때까지 가져옴.
-    print(row["stationName"], row["pm25Value"]) # 중구의 현재 pm 2.5 미세먼지 농도를 출력.
+# for row in APIresult["list"]: # 데이터의 개수가 10개보다 적을때(마지막 페이지)까지 가져옴. (또는 list에 none객체가 나오거나, length가 0이거나, key value가 없을때까지 가져옴.
+#     print(row["stationName"], row["pm25Value"]) # 중구의 현재 pm 2.5 미세먼지 농도를 출력.
     # 잘 응용하면 한시간마다 대기농도, 풍향 등의 정보를 자동으로 수집하여 CSV 등의 정형 데이터로 저장하고 시각화하고 머신러닝하는 등 다양한 방법으로 이것을 활용할 수 있다.
+
+# 마지막 페이지까지 전부 긁어와보기 (param 중에 "pageNo":1를 이용해서 다음 페이지를 참조 가능)
+    ## 함수화를 하거나 for문을 돌리거나 짜기 나름
+    # getAirKorea() 호출.
 # ------------------------------------------------------------------------------------------------------------------------------
 
-# 다섯 페이지 정도 긁어와보기 (param 중에 "pageNo":1를 이용해서 다음 페이지를 참조 가능)
+
+
+
+# ---------------------- timetime 사이트로 배운 내용 복습하기 ----------------------------
+url_timetime = "http://timetime.kr/user/login"
+data_timetime = {
+    "username": "asdfggh",
+    "password":"bjxjjJzPdm2Tq9e"
+}
+session_timetime = requests.Session() # 세션 객체를 통해 로그인 정보를 넘김
+html_timetime = session_timetime.post(url_timetime, data_timetime)
+print(html_timetime.status_code)
+print(html_timetime.request.body)
+print(html_timetime.cookies.get_dict()) # 쿠키는 사용하지 않는 사이트인듯.
+print(html_timetime.text)
+# ---------------------------------------------------------------------------------------
