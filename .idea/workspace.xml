@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="192f337b-9468-43cd-bfff-d487f725b519" name="Default Changelist" comment="" />
+    <list default="true" id="192f337b-9468-43cd-bfff-d487f725b519" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0305_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/0305_main.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,10 +16,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/0305_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1279">
-              <caret column="66" selection-start-column="66" selection-end-column="66" />
+            <state relative-caret-position="-1560">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
               <folding>
-                <element signature="e#0#31#0" expanded="true" />
+                <element signature="e#68#99#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -35,9 +38,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
-    <option name="width" value="974" />
+    <option name="width" value="1584" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
@@ -49,8 +52,8 @@
         <subPane>
           <expand>
             <path>
-              <item name="AIStudy2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AIStudy2019" type="462c0819:PsiDirectoryNode" />
+              <item name="ICT_AI_AdvancedClass_NLP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ICT_AI_AdvancedClass_NLP" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -60,7 +63,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Deeperence" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -117,9 +120,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27029914" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13277134" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -141,10 +145,10 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/0305_main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1279">
-          <caret column="66" selection-start-column="66" selection-end-column="66" />
+        <state relative-caret-position="-1560">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#68#99#0" expanded="true" />
           </folding>
         </state>
       </provider>
