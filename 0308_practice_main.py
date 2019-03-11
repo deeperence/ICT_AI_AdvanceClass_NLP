@@ -40,38 +40,38 @@ def postDownload(url, param=None, retries = 3):
             print(resp.request.headers) # 에러가 발생했을때의 헤더 출력
     # 아무 문제가 없을경우 resp 객체 반환
     return resp
-#
-#
-#
-# # 구글에서 'python' 검색결과의 제목만 10페이지정도 긁어오기
-# htmlGoogleSearch = getDownload("https://www.google.com/search?q=%ED%8C%8C%EC%9D%B4%EC%8D%AC&oq=%ED%8C%8C%EC%9D%B4%EC%8D%AC&aqs=chrome..69i57j69i61l2j69i65l2j69i61.1539j0j7&sourceid=chrome&ie=UTF-8")
-# domGoogleSearch = BeautifulSoup(htmlGoogleSearch.content, "lxml")
-# nodeGoogleSearch = domGoogleSearch.find_all("", {"class":"r"})
-# # print(len(nodeGoogleSearch)) # 검색결과 개수는 로그인 환경, 검색 환경설정 등의 기타 사유로 다를 수 있음.
-# # '.' 단위로 검색결과 하나씩 구분되고 있으므로, for문을 돌며 text만 추출한다,
-# for tag in domGoogleSearch.find_all("", {"class":"r"}) :
-#     print(tag.text) # 검색결과 제목들만 출력
-#     print(tag.find("a")["href"]) # 제목과 링크를 함께 출력
-#
-#
-#
-# # 네이버에서 'python' 블로그 검색결과의 제목 가져오기
-# htmlNaverSearch = getDownload("https://search.naver.com/search.naver", {"query":"파이썬"})
-# domNaverSearch = BeautifulSoup(htmlNaverSearch.content, "lxml")
-# for tag in domNaverSearch.find_all("", {"class":"sh_blog_top"}):
-#     print(tag.find("dt").text) # 제목만 가져오기
-#     print(tag.find("a")["href"]) # 링크만 가져오기
-#
-#
-#
-# # 다음에서 'python' 사이트 검색결과의 제목 가져오기
-# htmlDaumSearch = getDownload("https://search.daum.net/search", {"q":"파이썬"})
-# # print(htmlDaumSearch.url) # url을 제대로 받아왔는지 테스트
-# # print(htmlDaumSearch.text) # 리스폰스를 제대로 받아왔는지 테스트
-# domDaumSearch = BeautifulSoup(htmlDaumSearch.text, "html.parser")
-# for tag in domDaumSearch.find("", {"disp-attr":"IVR"}).find_all("", {"class":"wrap_tit"}):
-#     print(tag.text)
-#     print(tag.find("a")["href"])
+
+
+
+# 구글에서 'python' 검색결과의 제목만 10페이지정도 긁어오기
+htmlGoogleSearch = getDownload("https://www.google.com/search?q=%ED%8C%8C%EC%9D%B4%EC%8D%AC&oq=%ED%8C%8C%EC%9D%B4%EC%8D%AC&aqs=chrome..69i57j69i61l2j69i65l2j69i61.1539j0j7&sourceid=chrome&ie=UTF-8")
+domGoogleSearch = BeautifulSoup(htmlGoogleSearch.content, "lxml")
+nodeGoogleSearch = domGoogleSearch.find_all("", {"class":"r"})
+# print(len(nodeGoogleSearch)) # 검색결과 개수는 로그인 환경, 검색 환경설정 등의 기타 사유로 다를 수 있음.
+# '.' 단위로 검색결과 하나씩 구분되고 있으므로, for문을 돌며 text만 추출한다,
+for tag in domGoogleSearch.find_all("", {"class":"r"}) :
+    print(tag.text) # 검색결과 제목들만 출력
+    print(tag.find("a")["href"]) # 제목과 링크를 함께 출력
+
+
+
+# 네이버에서 'python' 블로그 검색결과의 제목 가져오기
+htmlNaverSearch = getDownload("https://search.naver.com/search.naver", {"query":"파이썬"})
+domNaverSearch = BeautifulSoup(htmlNaverSearch.content, "lxml")
+for tag in domNaverSearch.find_all("", {"class":"sh_blog_top"}):
+    print(tag.find("dt").text) # 제목만 가져오기
+    print(tag.find("a")["href"]) # 링크만 가져오기
+
+
+
+# 다음에서 'python' 사이트 검색결과의 제목 가져오기
+htmlDaumSearch = getDownload("https://search.daum.net/search", {"q":"파이썬"})
+# print(htmlDaumSearch.url) # url을 제대로 받아왔는지 테스트
+# print(htmlDaumSearch.text) # 리스폰스를 제대로 받아왔는지 테스트
+domDaumSearch = BeautifulSoup(htmlDaumSearch.text, "html.parser")
+for tag in domDaumSearch.find("", {"disp-attr":"IVR"}).find_all("", {"class":"wrap_tit"}):
+    print(tag.text)
+    print(tag.find("a")["href"])
 
 
 
