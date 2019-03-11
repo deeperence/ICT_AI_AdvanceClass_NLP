@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="192f337b-9468-43cd-bfff-d487f725b519" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/0308_main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0308_practice_main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0308_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/0308_main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,7 +17,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/0305_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
+            <state relative-caret-position="646">
               <caret line="34" selection-start-line="34" selection-end-line="34" selection-end-column="104" />
               <folding>
                 <element signature="e#68#99#0" expanded="true" />
@@ -46,17 +47,27 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/0308_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="178" column="35" selection-start-line="178" selection-start-column="35" selection-end-line="178" selection-end-column="35" />
+            <state relative-caret-position="-79">
+              <caret line="120" column="55" selection-start-line="120" selection-start-column="55" selection-end-line="120" selection-end-column="55" />
               <folding>
-                <element signature="e#64#93#0" expanded="true" />
-                <element signature="e#1263#1513#0" />
-                <element signature="e#1591#2092#0" />
-                <element signature="e#1702#1854#0" />
-                <element signature="e#1917#2092#0" />
+                <element signature="e#87#178#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/0308_practice_main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+                <marker date="1552285949376" expanded="true" signature="2713:3050" ph="..." />
+                <marker date="1552285949376" expanded="true" signature="3053:3472" ph="..." />
               </folding>
             </state>
           </provider>
@@ -91,12 +102,13 @@
         <option value="$PROJECT_DIR$/0305_main.py" />
         <option value="$PROJECT_DIR$/0307_main.py" />
         <option value="$PROJECT_DIR$/0308_main.py" />
+        <option value="$PROJECT_DIR$/0308_practice_main.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="915" />
-    <option name="width" value="1012" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -137,7 +149,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.0308_main">
+  <component name="RunManager" selected="Python.0308_practice_main">
     <configuration name="0307_main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="AIStudy2019" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -180,6 +192,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="0308_practice_main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="AIStudy2019" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/0308_practice_main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="AIStudy2019" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -203,6 +236,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.0308_practice_main" />
         <item itemvalue="Python.0308_main" />
         <item itemvalue="Python.0307_main" />
         <item itemvalue="Python.main" />
@@ -245,15 +279,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="915" y="0" width="1012" height="1047" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08213552" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1032666" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4720701" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29501083" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -273,21 +306,17 @@
     <MESSAGE value="2nd commit&#10;(some functions added.)" />
     <option name="LAST_COMMIT_MESSAGE" value="2nd commit&#10;(some functions added.)" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/0308_main.py</url>
-          <line>53</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/0307_main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/0305_main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
+        <state relative-caret-position="646">
           <caret line="34" selection-start-line="34" selection-end-line="34" selection-end-column="104" />
           <folding>
             <element signature="e#68#99#0" expanded="true" />
@@ -305,23 +334,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/0307_main.py">
+    <entry file="file://$PROJECT_DIR$/0308_main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="-79">
+          <caret line="120" column="55" selection-start-line="120" selection-start-column="55" selection-end-line="120" selection-end-column="55" />
+          <folding>
+            <element signature="e#87#178#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/0308_main.py">
+    <entry file="file://$PROJECT_DIR$/0308_practice_main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="178" column="35" selection-start-line="178" selection-start-column="35" selection-end-line="178" selection-end-column="35" />
+        <state relative-caret-position="475">
+          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
           <folding>
-            <element signature="e#64#93#0" expanded="true" />
-            <element signature="e#1263#1513#0" />
-            <element signature="e#1591#2092#0" />
-            <element signature="e#1702#1854#0" />
-            <element signature="e#1917#2092#0" />
+            <element signature="e#0#29#0" expanded="true" />
+            <marker date="1552285949376" expanded="true" signature="2713:3050" ph="..." />
+            <marker date="1552285949376" expanded="true" signature="3053:3472" ph="..." />
           </folding>
         </state>
       </provider>
