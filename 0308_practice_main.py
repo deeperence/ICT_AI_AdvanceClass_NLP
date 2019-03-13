@@ -1,3 +1,4 @@
+# 이 코드에서는 각 포털사이트에서 'python' 키워드를 검색하고 특정 섹션만 읽어와 보겠습니다.
 from bs4 import BeautifulSoup
 import requests
 

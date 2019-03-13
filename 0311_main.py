@@ -1,4 +1,4 @@
-# Selector를 사용하여 웹 크롤링하기
+# 이 코드에서는 Selector를 사용하여 웹을 크롤링하는 방법에 대해서 알아봅니다.
 
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
@@ -46,29 +46,29 @@ def postDownload(url, param=None, retries = 3):
 
 # ----------------------------------------------- selector 사용하기 ----------------------------------------------
 # Selector 사용해서 구글로부터 'python' 검색결과의 제목만 10페이지정도 긁어오기
-# htmlGoogleSearch = getDownload("https://www.google.com/search", {"q":"파이썬"})
-# domGoogleSearch = BeautifulSoup(htmlGoogleSearch.text, "lxml")
-# for tag in domGoogleSearch.select(".r h3"): # r 클래스 하위의 모든 h3 태그가 달린 10개를 들고옴.
-#     print(tag.text)
-#     print(tag.find_parent()["href"])
+htmlGoogleSearch = getDownload("https://www.google.com/search", {"q":"파이썬"})
+domGoogleSearch = BeautifulSoup(htmlGoogleSearch.text, "lxml")
+for tag in domGoogleSearch.select(".r h3"): # r 클래스 하위의 모든 h3 태그가 달린 10개를 들고옴.
+    print(tag.text)
+    print(tag.find_parent()["href"])
 
 
 # Selector 사용해서 네이버로부터 'python' 검색결과의 제목만 10페이지정도 긁어오기
-# htmlNaverSearch = getDownload("https://search.naver.com/search.naver", {"query":"파이썬"})
-# domNaverSearch = BeautifulSoup(htmlNaverSearch.text, "lxml")
-# for tag in domNaverSearch.select(".blog dt > a"):
-#     print(tag.text)
-#     print(tag["href"])
+htmlNaverSearch = getDownload("https://search.naver.com/search.naver", {"query":"파이썬"})
+domNaverSearch = BeautifulSoup(htmlNaverSearch.text, "lxml")
+for tag in domNaverSearch.select(".blog dt > a"):
+    print(tag.text)
+    print(tag["href"])
 
 
 # 네이트에서 'python' 블로그 검색결과의 제목 가져오기
-# htmlNateSearch = getDownload("https://search.daum.net/nate?thr=sbma&w=tot", {"q":"파이썬"})
-# domNateSearch = BeautifulSoup(htmlNateSearch.text, "html.parser")
-# nodeNateSearch = domNateSearch.find_all("", {"id" : "blogColl"}) # 테스트를 위한 임시 print문
+htmlNateSearch = getDownload("https://search.daum.net/nate?thr=sbma&w=tot", {"q":"파이썬"})
+domNateSearch = BeautifulSoup(htmlNateSearch.text, "html.parser")
+nodeNateSearch = domNateSearch.find_all("", {"id" : "blogColl"}) # 테스트를 위한 임시 print문
 # 사이트 검색 부분의 유일한 key-value쌍인 "disp-attr":"IVR"으로 find한 후 find_all을 통해 해당 트리 아래에 있는 모든 "class":"wrap_tit"를 가져옴.
-# for tag in domNateSearch.select("#blogColl a.f_link_b"):
-#     print(tag.text)
-#     print(tag["href"])
+for tag in domNateSearch.select("#blogColl a.f_link_b"):
+    print(tag.text)
+    print(tag["href"])
 # ---------------------------------------------------------------------------------------------------------------
 
 
@@ -104,22 +104,30 @@ def getUrls(url, depth): # 3단계정도 깊이를 거쳤으면 그만하라고 
                         urls.append({"url" : "http" + href, "depth" : depth + 1})
     print("{0} {1} / {2}".format(">" * depth, url, len(urls))) # 진행도를 위한 구문. ">" 텍스트가 depth 개수만큼 찍히므로 이를 통해 단계를 확인 가능.
     return urls
+# --------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 
 # ------------------------ http://example.webscraping.com/places/default/index 로부터 웹스크롤링 해보기 -------------------------------------------------
-# queue = getUrls(urlExWebscraping) # while문 돌면서 url를 getUrls함수에 pop해 넣어주기 위한 리스트 (첫페이지에서 가져온 모든 링크를 저장)
-# visited = [] # 이미 한번 방문한 링크를 관리하는 리스트. 지금은 리스트이지만, 현업에서는 Timestamp와 DB를 활용해서 관리해야 한다.
-#
-# while queue:
-#     time.sleep(random.randint(1,3)) # 비주기적으로 랜덤하게 sleep을 걸기 위한 작업. Too many requests 에러를 막기 위한 것
-#
-#     seed = queue.pop(0)
-#     links = getUrls(seed)
-#     visited.append(seed)
-#     target = [tag for tag in links if tag not in queue and visited] # 만약 tag가 한번이라도 queue와 visited에 안나타났으면 넣으라는 뜻. (queue는 계속 늘어남)
-#
-#     print("Queue: {0}, Links:{1}".format(len(queue), len(target))) # 현재 큐에 몇개가 남아있고 남은 링크가 무엇인지 출력
-#     queue.extend(links) # 주소를 추가해야지, 리스트를 추가하면 안되므로 append대신 extend를 사용
+
+queue = getUrls(urlExWebscraping) # while문 돌면서 url를 getUrls함수에 pop해 넣어주기 위한 리스트 (첫페이지에서 가져온 모든 링크를 저장)
+visited = [] # 이미 한번 방문한 링크를 관리하는 리스트. 지금은 리스트이지만, 현업에서는 Timestamp와 DB를 활용해서 관리해야 한다.
+
+while queue:
+    time.sleep(random.randint(1,3)) # 비주기적으로 랜덤하게 sleep을 걸기 위한 작업. Too many requests 에러를 막기 위한 것
+
+    seed = queue.pop(0)
+    links = getUrls(seed)
+    visited.append(seed)
+    target = [tag for tag in links if tag not in queue and visited] # 만약 tag가 한번이라도 queue와 visited에 안나타났으면 넣으라는 뜻. (queue는 계속 늘어남)
+
+    print("Queue: {0}, Links:{1}".format(len(queue), len(target))) # 현재 큐에 몇개가 남아있고 남은 링크가 무엇인지 출력
+    # queue.extend(links) # 주소를 추가해야지, 리스트를 추가하면 안되므로 append대신 extend를 사용
 # -------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 
 htmlGoogleSearch = getDownload(urlGoogleSearch, param)
 domGoogleSearch = BeautifulSoup(htmlGoogleSearch.text, "lxml")
