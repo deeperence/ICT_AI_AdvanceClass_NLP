@@ -1,3 +1,5 @@
+# 이 코드에서는 BeautifulSoup을 이용해 정적 컨텐츠(ex. 뽐뿌 사이트)를 긁어오는 방법에 대해 알아봅니다.
+
 import requests
 from bs4 import BeautifulSoup
 from urllib.request import urlopen, Request

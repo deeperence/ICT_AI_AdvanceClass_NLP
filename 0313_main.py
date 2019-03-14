@@ -1,3 +1,5 @@
+# 이 코드에서는 셀레니움 모듈을 이용해 동적 컨텐츠(ex. 네이버 스팸메일함)를 긁어오는 방법에 대해 알아봅니다.
+
 import requests
 import json
 import re

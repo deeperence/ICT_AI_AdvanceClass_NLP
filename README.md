@@ -7,3 +7,5 @@
 2. 3월 7일 : 웹 크롤링 - requests모듈을 사용해 웹 페이지로부터 리스폰스를 받고 cookie와 session 방식으로 로그인을 시도해 보았습니다. 또, 공공데이터포털로부터 대기오염지수를 .json으로 불러와 파싱하는 방법에 대해 배웠습니다. (requests, json)
 3. 3월 8일 : DOM tree를 구성하고 태그와 키워드를 통해 원하는 정보를 스크랩하는 방법에 대해 배웠습니다. (requests, BeautifulSoup)
 4. 3월 11일 : Selector를 사용한 웹 크롤링 방법(CSS 정보로부터 탐색)에 대해 배웠습니다. (requests, BeautifulSoup)
+5. 3월 12일 : BeautifulSoup을 이용해 정적 컨텐츠(ex. 뽐뿌 사이트)를 긁어오는 방법에 대해 알아봅니다. (BeautifulSoup)
+6. 3월 13일 : selenium을 이용해 동적 컨텐츠(ex. 네이버 스팸메일함)를 긁어오는 방법에 대해 알아봅니다. (selenium)
