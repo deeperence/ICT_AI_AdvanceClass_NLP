@@ -149,8 +149,8 @@ links = [] # 빈 리스트 생성
 
 
 # 자유게시판 리스트를 주소와 함께 받아오기
-for tag in dom2.select('font.list_title'):
-    print(tag.text) # font.list_title가 달린 태그의 text를 출력
+for tag in dom2.select('font.list_title'): # 폰트 클래스 중 list_title가 달린 태그 선택
+    print(tag.text) # font 클래스 중 list_title가 달린 태그의 text를 출력
     print(tag.find_parent()['href']) # 해당 글의 상대주소 출력
     print(requests.compat.urljoin(url2, tag.find_parent()['href'])) # 해당 글의 절대주소 출력
     links.append(requests.compat.urljoin(url2, tag.find_parent()['href']))
