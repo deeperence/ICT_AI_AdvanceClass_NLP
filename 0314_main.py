@@ -1,12 +1,7 @@
-# 이 코드에서는
+# 이 코드에서는 다음과 KT 사이트에 로그인해봅니다.
 
 import requests
-import json
-import re
-from bs4 import BeautifulSoup
 from selenium import webdriver
-from selenium.common.exceptions import ElementNotVisibleException # 셀레니움에서 발생된 에러들을 관리
-from selenium.webdriver.support.ui import WebDriverWait
 
 
 def getDownload(url, param=None, retries=3):
@@ -29,15 +24,15 @@ header = {'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/53
 
 # 다음 로그인해보기(간단버전)
 browser = webdriver.Chrome() # chrome브라우저를 관리하기 위한 드라이버 인스턴스 생성
-# browser.get("https://www.daum.net")
-# print(browser.window_handles()) # 현재 떠 있는 브라우져창의 정보를 출력
-# browser.switch_to_window(browser.window_handles[0]) # 브라우져 창을 첫 번째로 전환
-#
-# # iframe을 만난 경우 해결법
-# iframe = browser.find_element_by_id("loginForm").get_attribute("outerHTML")
-# browser.switch_to_frame(iframe)
-# print(browser.find_element_by_id("id").send_keys("TEST"))
-# browser.switch_to_default_content()
+browser.get("https://www.daum.net")
+print(browser.window_handles()) # 현재 떠 있는 브라우져창의 정보를 출력
+browser.switch_to_window(browser.window_handles[0]) # 브라우져 창을 첫 번째로 전환
+
+# iframe을 만난 경우 해결법
+iframe = browser.find_element_by_id("loginForm").get_attribute("outerHTML")
+browser.switch_to_frame(iframe)
+print(browser.find_element_by_id("id").send_keys("TEST"))
+browser.switch_to_default_content()
 
 
 
