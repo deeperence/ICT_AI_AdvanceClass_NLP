@@ -16,7 +16,7 @@
 
 import requests
 from bs4 import BeautifulSoup
-import re
+import re # 정규식을 사용하기 위한 모듈
 header = {'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36'}
 
 def getDownload(url, param=None, retries=3):
@@ -37,47 +37,42 @@ def getDownload(url, param=None, retries=3):
 url_naverNewsMain = "https://news.naver.com/"
 param_naverNewsMain = {"id":"category_ranking"}
 html_naverNewsMain = getDownload(url_naverNewsMain, param_naverNewsMain)
-dom_naverNewsMain = BeautifulSoup(html_naverNewsMain.text, 'html.parser')
-# NewsCategories = {100:"정치", 101:"경제", 102:"사회", 103:"생활/문화", 104:"세계", 105:"IT'과학"}
-
+dom_naverNewsMain = BeautifulSoup(html_naverNewsMain.text, 'html.parser') # DOM tree 구성
 NaverHotNewsList = [] # 가장 많이 본 뉴스를 저장하기 위한 빈 리스트
 aidNum = [] # 뉴스의 고유번호를 저장하기 위한 빈 리스트
-CurrentNewsNum = 0
+CurrentNewsNum = 0 # 뉴스 카테고리 판단을 위한 현재 기사링크 번호
 
-for tag in dom_naverNewsMain.select('ul.section_list_ranking'):
-    for tag2 in tag.find_all('a'):
-        if tag2.has_attr('href'):
-            aidNum.append(re.findall("aid=([0-9]{10})", tag2['href']))
-            # print(tag2['href'])
-            NaverHotNewsList.append(requests.compat.urljoin(url_naverNewsMain, tag2['href']))
-print(len(aidNum))
+for tag in dom_naverNewsMain.select('ul.section_list_ranking'): #section_list_ranking 클래스를 갖고 있는 ul태그를 선택
+    for tag2 in tag.find_all('a'): # 그 중에서 a태그를 갖고 있는 노드들을 모두 선택
+        if tag2.has_attr('href'): # 노드가 href라는 attribute를 갖고 있는 경우 수행
+            aidNum.append(re.findall("aid=([0-9]{10})", tag2['href'])) # 정규식을 통해 상대주소 내에 들어 있는 특정 문자열 검색. (href를 갖고 있으면서 'aid=' 뒤에 등장하는 0~9까지 숫자 범위 내에서 10개의 문자를 찾아 aidNum 리스트에 append.)
+            NaverHotNewsList.append(requests.compat.urljoin(url_naverNewsMain, tag2['href'])) # 상대주소를 절대주소로 urljoin을 통해 정규화
+print("Entire article number : " + str(len(aidNum))) # 전체 60개의 주소를 잘 불러왔는지 확인 (각 카테고리별 10개씩 총 6 카테고리, 60이 출력되면 정상)
 # print(NaverHotNewsList) # 절대경로로 변환된 네이버 핫뉴스 목록(60개)
-# print(len(NaverHotNewsList[0]))
 
-def txtFileIO(CurrentNewsNum, categoryname):
-    f = open("./0314_DownloadedNewstxts/" + categoryname + "-" + str(aidNum[CurrentNewsNum][0]) + ".txt", 'w', encoding='UTF-8')
-    f.write(data)
-    f.close()
-    # print(type(aidNum[CurrentNewsNum]))
-    print("file has been created! : " + "./0314_DownloadedNewstxts/" + categoryname + "-" + str(aidNum[CurrentNewsNum][0]) + ".txt" )
+def txtFileIO(CurrentNewsNum, data, categoryname): # 텍스트 파일을 오픈하고 쓴 후 닫는 함수
+    f = open("./0314_DownloadedNewstxts/" + categoryname + "-" + str(aidNum[CurrentNewsNum][0]) + ".txt", 'w', encoding='UTF-8') # 파일이름 에러를 피하기 위해 'w'로 열고 'UTF-8'로 인코딩
+    f.write(data) # 뉴스기사 txt가 들어 있는 data 리스트를 f 핸들러를 이용해 txt에 write
+    f.close() # txt파일 닫기
+    print("File has been created! Saved txt path : " + "./0314_DownloadedNewstxts/" + categoryname + "-" + str(aidNum[CurrentNewsNum][0]) + ".txt" )
 
 for title in NaverHotNewsList:
-    html_naverHotNews = getDownload(title)
-    dom_naverHotNews = BeautifulSoup(html_naverHotNews.text, 'html.parser')
-    data = dom_naverHotNews.find("", {"id":"articleBodyContents"}).text
+    html_naverHotNews = getDownload(title) # 뉴스 링크 하나를 getDownload 함수에 넣어 반환
+    dom_naverHotNews = BeautifulSoup(html_naverHotNews.text, 'html.parser') # DOM tree 생성
+    data = dom_naverHotNews.find("", {"id":"articleBodyContents"}).text # articleBodyContents라는 id를 갖는 태그 검색한 후 text만 data 리스트에 저장
 
     if CurrentNewsNum < 10:
-        txtFileIO(CurrentNewsNum, "정치")
+        txtFileIO(CurrentNewsNum, data, "정치")
     elif 10 <= CurrentNewsNum < 20:
-        txtFileIO(CurrentNewsNum, "경제")
+        txtFileIO(CurrentNewsNum, data, "경제")
     elif 20 <= CurrentNewsNum < 30:
-        txtFileIO(CurrentNewsNum, "사회")
+        txtFileIO(CurrentNewsNum, data, "사회")
     elif 30 <= CurrentNewsNum < 40:
-        txtFileIO(CurrentNewsNum, "생활문화")
+        txtFileIO(CurrentNewsNum, data, "생활문화")
     elif 40 <= CurrentNewsNum < 50:
-        txtFileIO(CurrentNewsNum, "세계")
+        txtFileIO(CurrentNewsNum, data, "세계")
     elif 50 <= CurrentNewsNum < 60:
-        txtFileIO(CurrentNewsNum, "IT과학")
+        txtFileIO(CurrentNewsNum, data, "IT과학")
     else:
         NotImplementedError()
         break
