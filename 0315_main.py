@@ -1,4 +1,4 @@
-# 이 코드에서는 한국어 형태소 분석기를 응용하는 방법에 대해 알아봅니다.
+# 이 코드에서는 형태소 분석기를 응용하여 문단, 문장, 어절, 정규식, Ngram 단위로 토큰화를 수행해 보고 불용어를 처리해 봅니다.(구두점, 구두점, Stopwords)
 
 from konlpy.tag import Kkma
 from konlpy.corpus import kolaw, kobill # 법률 관련 말뭉치 임포트(사실상 테스트 데이터.)
