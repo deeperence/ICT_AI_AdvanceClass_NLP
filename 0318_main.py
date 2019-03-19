@@ -3,7 +3,7 @@
 
 from nltk.corpus import gutenberg
 from nltk.tokenize import word_tokenize
-from konlpy.corpus import kolaw
+from konlpy.corpus import kolaw, kobill
 from nltk import Text
 from matplotlib import font_manager, rc
 import os, re
