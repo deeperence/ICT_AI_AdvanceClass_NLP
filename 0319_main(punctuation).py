@@ -95,17 +95,10 @@ for term in sentence.split():
         flag = True
         # term = re.sub(r"[0-9]+", "", term)
 
-        if pattern.search("w"+term+</w>)
-            term = re.sub(r"\B[0-9]+\B", "", term)
-        for ngram in ngramUmheol(term):
-            if ngram in stop:
-                flag=False
-                break
-
-        if flag: # true이면
-            result.append(term)
-        else:
+        if pattern.search("w"+term+"</w>"):
             result.append("*"*len(term))
+        else:
+            result.append(term)
 print(" ".join(result))
 
 
