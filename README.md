@@ -16,5 +16,6 @@
 10. 3월 19일 : 말뭉치로부터 최빈 단어를 그래프로 시각화하고(matplotlib) 다양한 불용어(구두점, Stopwords)를 처리하는 방법에 대해 알아봅니다.(punctuation)
 11 : 3월 20일 : 다양한 방법을 사용하여 Text로부터 형태소 분석을 수행해 봅니다. (English : nltk.pos_tag, Kor : Hannanum, Kkma, Komoran, Okt)
 12. 3월 21일 : 구문 분석을 수행한 후 형태소를 분석하여(POS Taggers) 시각화(ParseTree, WordCloud)하는 방법에 대해 알아봅니다. 
+13. 3월 22일 : 주어진 텍스트 데이터를 이용해 정보 검색(색인)을 수행하는 방법에 대해 알아보았습니다. (collections.defaultdict 사용, Document-Term Matrix, invertedDocument)
 
 <br>* 3월 19일 이후 코드부터 유지보수 진행중
