@@ -20,19 +20,19 @@
 
 <br>
 
-| 사용한 Package | Version | 
+| 사용한 Package | Version | 설명 |
 |:-------:|:-------:|
-|   beautifulsoup4    |   4.7.1    |
-|   JPype1    |   0.6.3    |
-|   Keras    |   2.2.4   |
-|   konlpy      |   0.5.1   |
-|   lxml    |   4.3.2    |
-|   matplotlib    |   3.0.3    |
-|   nltk      |   3.4    |
-|   numpy      |   1.16.2    |
-|   requests    |  2.21.0    |
-|   scipy     |   1.2.1   |
-|   seaborn     |   0.9.0   |
-|   selenium     |   3.141.0   |
-|   soupsieve     |   1.8   |
-|   urllib3      |   1.24.1   |
+|   beautifulsoup4    |   4.7.1    |(이하 작성중)|
+|   JPype1    |   0.6.3    ||
+|   Keras    |   2.2.4   ||
+|   konlpy      |   0.5.1   ||
+|   lxml    |   4.3.2    ||
+|   matplotlib    |   3.0.3    ||
+|   nltk      |   3.4    ||
+|   numpy      |   1.16.2    ||
+|   requests    |  2.21.0    ||
+|   scipy     |   1.2.1   ||
+|   seaborn     |   0.9.0   ||
+|   selenium     |   3.141.0   ||
+|   soupsieve     |   1.8   ||
+|   urllib3      |   1.24.1   ||
