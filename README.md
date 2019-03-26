@@ -18,4 +18,22 @@
 12. 3월 21일 : 구문 분석을 수행한 후 형태소를 분석하여(POS Taggers) 시각화(ParseTree, WordCloud)하는 방법에 대해 알아봅니다. 
 13. 3월 22일 : 주어진 텍스트 데이터를 이용해 정보 검색(색인)을 수행하는 방법에 대해 알아보았습니다. (collections.defaultdict 사용, Document-Term Matrix, invertedDocument)
 
+| 사용한 Package | Version | 
+|:-------:|:-------:|
+|   beautifulsoup4    |   4.7.1    |
+|   JPype1    |   0.6.3    |
+|   Keras    |   2.2.4   |
+|   konlpy      |   0.5.1   |
+|   lxml    |   4.3.2    |
+|   matplotlib    |   3.0.3    |
+|   nltk      |   3.4    |
+|   numpy      |   1.16.2    |
+|   requests    |  2.21.0    |
+|   scipy     |   1.2.1   |
+|   seaborn     |   0.9.0   |
+|   selenium     |   3.141.0   |
+|   soupsieve     |   1.8   |
+|   urllib3      |   1.24.1   |
+
 <br>* 3월 19일 이후 코드부터 유지보수 진행중
+
