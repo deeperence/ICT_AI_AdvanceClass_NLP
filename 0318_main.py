@@ -179,7 +179,7 @@ data = {makeTerm("low"):5,
         }
 
 
-def mergeTokens(maxToken, data): # 9번과정 (많이 나온 두 게가 하나의 토큰으로 합쳐지게 된다.)
+def mergeTokens(maxToken, data): # 9번과정 (많이 나온 두 개가 하나의 토큰으로 합쳐지게 된다.)
     key = " ".join(maxToken) # 찾아야 하는 이 key와 일치하는 것을 합쳐야 함. (정규식을 활용)
     result = defaultdict(int)
     """
