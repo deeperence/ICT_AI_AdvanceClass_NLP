@@ -17,22 +17,24 @@
 11. 3월 20일 : 다양한 방법을 사용하여 Text로부터 형태소 분석을 수행해 봅니다. (English : nltk.pos_tag, Kor : Hannanum, Kkma, Komoran, Okt)
 12. 3월 21일 : 구문 분석을 수행한 후 형태소를 분석하여(POS Taggers) 시각화(ParseTree, WordCloud)하는 방법에 대해 알아봅니다. 
 13. 3월 22일 : 주어진 텍스트 데이터를 이용해 정보 검색(색인)을 수행하는 방법에 대해 알아보았습니다. (collections.defaultdict 사용, Document-Term Matrix, invertedDocument)
+14. 3월 26일 : 정규식을 이용해 한국어 텍스트 문서의 전처리를 수행하고 lexicon을 만들어 봅니다. (N-gram, Regular expression)
+
 
 <br>
 
 | 사용한 Package | Version | 설명 |
-|:-------:|:-------:|:-------:|
-|   beautifulsoup4    |   4.7.1    |(이하 작성중)|
-|   JPype1    |   0.6.3    ||
-|   Keras    |   2.2.4   ||
-|   konlpy      |   0.5.1   ||
-|   lxml    |   4.3.2    ||
-|   matplotlib    |   3.0.3    ||
-|   nltk      |   3.4    ||
-|   numpy      |   1.16.2    ||
-|   requests    |  2.21.0    ||
-|   scipy     |   1.2.1   ||
-|   seaborn     |   0.9.0   ||
-|   selenium     |   3.141.0   ||
-|   soupsieve     |   1.8   ||
-|   urllib3      |   1.24.1   ||
+|:-------:|:-------:|:-------|
+|   beautifulsoup4    |   4.7.1    |HTML 문서를 DOM(Document Object Model) 구조로 해석하는 데 도움을 주는 모듈입니다. |
+|   JPype1    |   0.6.3    |자바 클래스 라이브러리에 대해 full-access가 가능하게 해 주는 모듈입니다.|
+|   Keras    |   2.2.4   |쉬운 고수준 API를 제공하는 딥러닝 프레임워크입니다. |
+|   konlpy      |   0.5.1   |한국어 정보처리를 위한 파이썬 패키지입니다. |
+|   lxml    |   4.3.2    |속도가 빠른 Parser입니다. 보통 beautifulsoup4과 lxml을 함께 사용하며, 다른 Parser로는 html.parser가 있지만 속도가 빠른 lxml을 자주 사용합니다.|
+|   matplotlib    |   3.0.3    |자료를 chart나 plot으로 시각화하는 패키지입니다.|
+|   nltk      |   3.4    |영문 자연어처리 교육용으로 개발된 Natural Language Package입니다.|
+|   numpy      |   1.16.2    |파이썬 기반의 데이터 분석 환경에서 행렬 연산을 위한 핵심 라이브러리입니다.|
+|   requests    |  2.21.0    |간편하게 HTTP 요청 처리를 하기 위해 주로 사용하는 모듈입니다.|
+|   scipy     |   1.2.1   |파이썬 환경에서 과학, 분석 및 엔지니어링을 위한 라이브러리입니다.|
+|   seaborn     |   0.9.0   |matplotlib을 기반으로 다양한 색상 테마와 통계용 차트 등의 기능을 추가한 시각화 패키지입니다.|
+|   selenium     |   3.141.0   |webdriver라는 API를 통해 Chrome 등의 브라우저를 제어할 수 있으며, 주로 웹앱을 테스트하는데 이용하는 프레임워크입니다. DHTML 웹 크롤러를 만들 때 가장 많이 사용됩니다.|
+|   soupsieve     |   1.8   |beautifulsoup4와 함께 사용되도록 만들어진 CSS selector 라이브러리입니다. modern CSS selector를 활용해 selecting, matching, filtering 등을 수행할 수 있도록 해 줍니다.|
+|   urllib3      |   1.24.1   |web의 source code를 읽어올 수 있도록 도와주는 모듈입니다. requests를 사용하면 간혹 보안으로 인하여 웹의 코드를 읽어오지 못할 수 있기 때문이며, urllib3으로 읽어온 값은 binary이므로 decoding을 한 후 beautifulsoup4으로 파싱해야 합니다.|
