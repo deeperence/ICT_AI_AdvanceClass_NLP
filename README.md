@@ -14,7 +14,7 @@
 8. 3월 15일 : NLTK, Konlpy 형태소 분석기와 간단한 정규식을 사용하여 토큰화를 수행해 봅니다. (Konlpy, NLTK, re, sent_tokenize)
 9. 3월 18일 : 텍스트를 분석하는 다양한 기법들에 대해 알아보고(concordance, similar 등), 14일에 긁은 뉴스 기사들을 실제로 분석해 봅니다. N-gram 기법을 통해 빈도수를 기반으로 어근을 분리해 봅니다. 
 10. 3월 19일 : 말뭉치로부터 최빈 단어를 그래프로 시각화하고(matplotlib) 다양한 불용어(구두점, Stopwords)를 처리하는 방법에 대해 알아봅니다.(punctuation)
-11 : 3월 20일 : 다양한 방법을 사용하여 Text로부터 형태소 분석을 수행해 봅니다. (English : nltk.pos_tag, Kor : Hannanum, Kkma, Komoran, Okt)
+11. 3월 20일 : 다양한 방법을 사용하여 Text로부터 형태소 분석을 수행해 봅니다. (English : nltk.pos_tag, Kor : Hannanum, Kkma, Komoran, Okt)
 12. 3월 21일 : 구문 분석을 수행한 후 형태소를 분석하여(POS Taggers) 시각화(ParseTree, WordCloud)하는 방법에 대해 알아봅니다. 
 13. 3월 22일 : 주어진 텍스트 데이터를 이용해 정보 검색(색인)을 수행하는 방법에 대해 알아보았습니다. (collections.defaultdict 사용, Document-Term Matrix, invertedDocument)
 
