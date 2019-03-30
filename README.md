@@ -19,7 +19,7 @@
 13. 3월 22일 : 주어진 텍스트 데이터를 이용해 정보 검색(색인)을 수행하는 방법에 대해 알아보았습니다. (collections.defaultdict 사용, Document-Term Matrix, invertedDocument)
 14. 3월 26일 : 정규식을 이용해 한국어 텍스트 문서의 전처리를 수행하고 lexicon을 만들어 봅니다. (N-gram, Regular expression)
 15. 3월 27일 : 벡터 공간에 문서를 임베딩하고 term에 가중치를 적용해 IR(Information Retrieval)을 수행하는 방법에 대해 알아봅니다. (VS model, TF, IDF)
-* 0328_main.ipynb is under maintaining.
+* 0328_main.ipynb, 0329_main.ipynb is under maintaining.
 
 <br>
 
