@@ -10,7 +10,7 @@
 4. 3월 11일 : Selector를 사용한 웹 크롤링 방법(CSS 정보로부터 탐색)에 대해 배웠습니다. (requests, BeautifulSoup)
 5. 3월 12일 : BeautifulSoup을 이용해 정적 컨텐츠(ex. 뽐뿌 사이트)를 긁어오는 방법에 대해 알아봅니다. (BeautifulSoup)
 6. 3월 13일 : selenium을 이용해 동적 컨텐츠(ex. 네이버 스팸메일함)를 긁어오는 방법에 대해 알아봅니다. (selenium)
-7. 3월 14일 : 다음과 KT 사이트에 로그인해보고(Selenium) 네이버 뉴스 사이트에서 핫한 기사 60개를 카테고리별로 긁어오는 프로젝트를 수행했습니다. 
+7. 3월 14일(프로젝트) : 다음과 KT 사이트에 로그인해보고(Selenium) 네이버 뉴스 사이트에서 핫한 기사 60개를 카테고리별로 긁어오는 프로젝트를 수행했습니다. 
 8. 3월 15일 : NLTK, Konlpy 형태소 분석기와 간단한 정규식을 사용하여 토큰화를 수행해 봅니다. (Konlpy, NLTK, re, sent_tokenize)
 9. 3월 18일 : 텍스트를 분석하는 다양한 기법들에 대해 알아보고(concordance, similar 등), 14일에 긁은 뉴스 기사들을 실제로 분석해 봅니다. N-gram 기법을 통해 빈도수를 기반으로 어근을 분리해 봅니다. 
 10. 3월 19일 : 말뭉치로부터 최빈 단어를 그래프로 시각화하고(matplotlib) 다양한 불용어(구두점, Stopwords)를 처리하는 방법에 대해 알아봅니다.(punctuation)
@@ -19,7 +19,8 @@
 13. 3월 22일 : 주어진 텍스트 데이터를 이용해 정보 검색(색인)을 수행하는 방법에 대해 알아보았습니다. (collections.defaultdict 사용, Document-Term Matrix, invertedDocument)
 14. 3월 26일 : 정규식을 이용해 한국어 텍스트 문서의 전처리를 수행하고 lexicon을 만들어 봅니다. (N-gram, Regular expression)
 15. 3월 27일 : 벡터 공간에 문서를 임베딩하고 term에 가중치를 적용해 IR(Information Retrieval)을 수행하는 방법에 대해 알아봅니다. (VS model, TF, IDF)
-* 0328_main.ipynb, 0329_main.ipynb is under maintaining.
+16. 3월 28일 : TF(Term Frequency), IDF(Inverse Document Frequency)를 구하고 Euclidian distance와 Coisne simmilarity로 IR(Information retrieval)을 수행해 봅니다.
+17. 3월 29일(프로젝트) : 그동안 배운 내용 중 3월 28일 코드를 기반으로 정보 검색기를 만들어 봅니다. 
 
 <br>
 
