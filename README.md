@@ -21,7 +21,7 @@
 15. 3월 27일 : 벡터 공간에 문서를 임베딩하고 term에 가중치를 적용해 IR(Information Retrieval)을 수행하는 방법에 대해 알아봅니다. (VS model, TF, IDF)
 16. 3월 28일 : TF(Term Frequency), IDF(Inverse Document Frequency)를 구하고 Euclidian distance와 Coisne simmilarity로 IR(Information retrieval)을 수행해 봅니다.
 17. 3월 29일(프로젝트) : 그동안 배운 내용 중 3월 28일 코드를 기반으로 정보 검색기를 만들어 봅니다. 
-
+* 0307_main.py is under maintenance
 <br>
 
 | 사용한 Package | Version | 설명 |
