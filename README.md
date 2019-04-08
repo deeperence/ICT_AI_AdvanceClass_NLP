@@ -20,7 +20,16 @@
 14. 3월 26일 : 정규식을 이용해 한국어 텍스트 문서의 전처리를 수행하고 lexicon을 만들어 봅니다. (N-gram, Regular expression)
 15. 3월 27일 : 벡터 공간에 문서를 임베딩하고 term에 가중치를 적용해 IR(Information Retrieval)을 수행하는 방법에 대해 알아봅니다. (VS model, TF, IDF)
 16. 3월 28일 : TF(Term Frequency), IDF(Inverse Document Frequency)를 구하고 Euclidian distance와 Coisne simmilarity로 IR(Information retrieval)을 수행해 봅니다.
-17. 3월 29일(프로젝트) : 그동안 배운 내용 중 3월 28일 코드를 기반으로 정보 검색기를 만들어 봅니다. 
+17. 3월 29일(프로젝트) : 그동안 배운 내용 중 3월 28일 코드를 기반으로 정보 검색기를 만들어 봅니다. (4/3 코드와 통합되어 있습니다.)
+18. 4월 1일(특강) : Tensorflow로 간단한 선형 회귀 문제를 구현해 보고, Keras를 이용해 간단한 이미지 분류(MNIST) 및 영화 데이터를 통한 감정 분류(IMDB)를 수행해 봅니다. 
+19. 4월 2일 : 유클리디안 거리와 코사인 각도를 이용한 유사도 비교 알고리즘을 구현하고 KNN 알고리즘을 통해 주어진 벡터로부터 가장 유사한 벡터를 3개를 찾아 봅니다.
+20. 4월 3일(프로젝트) : 3월 29일 코드에 cosine simmilarity와 KNN search 알고리즘을 적용하여 3월 14일에 긁은 네이버 뉴스 기사의 카테고리를 분류해 봅니다. (쿼리 뉴스 기사를 텍스트 전문을 받아 정치, IT/과학 등의 카테고리를 분류합니다.)  
+21. 4월 4일 : 확률을 기반으로 문서 분류를 수행하고 네이버 메일함의 메일들을 크롤링해 봅니다. 
+    * 0404_main.ipynb : Naive Bayes 기법을 통해 확률을 기반으로 문서를 분류해 봅니다.
+    * 0404_NaverMailCrawler.py.ipynb : Selenium과 requests 모듈을 이용하여 HTTP response 객체를 생성합니다.
+22. 4월 5일(프로젝트) : 4월 4일의 코드를 기반으로 네이버 메일함으로부터 정상 메일과 스팸 메일을 각각 15개씩 크롤링하고, 확률에 기반하여 정상 메일인지 스팸 메일인지 분류해 봅니다.  
+ 
+
 * 0307_main.py is under maintenance
 <br>
 
