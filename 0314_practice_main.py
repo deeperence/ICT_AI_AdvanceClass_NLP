@@ -59,7 +59,8 @@ def txtFileIO(CurrentNewsNum, data, categoryname): # 텍스트 파일을 오픈�
 for title in NaverHotNewsList:
     html_naverHotNews = getDownload(title) # 뉴스 링크 하나를 getDownload 함수에 넣어 반환
     dom_naverHotNews = BeautifulSoup(html_naverHotNews.text, 'html.parser') # DOM tree 생성
-    data = dom_naverHotNews.find("", {"id":"articleBodyContents"}).text # articleBodyContents라는 id를 갖는 태그 검색한 후 text만 data 리스트에 저장
+    data = dom_naverHotNews.find("", {"id":"right.ranking_contents"}).text # articleBodyContents라는 id를 갖는 태그 검색한 후 text만 data 리스트에 저장
+    # 네이버 뉴스기사 문서 내 id가 articleBodyContents -> right.ranking_contents으로 변경되었음
 
     if CurrentNewsNum < 10:
         txtFileIO(CurrentNewsNum, data, "정치")
