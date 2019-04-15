@@ -27,10 +27,14 @@
 21. 4월 4일 : 확률을 기반으로 문서 분류를 수행하고 네이버 메일함의 메일들을 크롤링해 봅니다. 
     * 0404_main.ipynb : Naive Bayes 기법을 통해 확률을 기반으로 문서를 분류해 봅니다.
     * 0404_NaverMailCrawler.py.ipynb : Selenium과 requests 모듈을 이용하여 HTTP response 객체를 생성합니다.
-22. 4월 5일(프로젝트) : 4월 4일의 코드를 기반으로 네이버 메일함으로부터 정상 메일과 스팸 메일을 각각 15개씩 크롤링하고, 확률에 기반하여 정상 메일인지 스팸 메일인지 분류해 봅니다.  
+22. 4월 5일(프로젝트) : 4월 4일의 코드를 기반으로 네이버 메일함으로부터 정상 메일과 스팸 메일을 각각 15개씩 크롤링하고, 확률에 기반하여 정상 메일인지 스팸 메일인지 분류해 봅니다. (Naive Bayes)
+23. 4월 9일 : Information Retrieval에서 사용되는 성능평가 기법에 대해 알아봅니다. (Precision, Recall)
+24. 4월 10일(프로젝트, 미완) : 4월 5일의 코드를 업그레이드하여 쿼리 기사 문서에 대해 카테고리별 다중 분류를 수행하고(Bimodal to Multimodal) 4월 9일에 배운 성능평가 기법을 적용하여 정확도 테스트를 수행해 봅니다. (Cosine similarity, KNN Search, Precision and Recall)
+25. 4월 11일 : 군집화 방법 중 하나인 Kmeans 알고리즘에 대해 알아봅니다. 2차원 유클리드 공간에서의 Kmeans 군집화를 수행해 보고 다차원으로 확장하여 군집화를 적용해 봅니다. (K-means, clustering)
+26. 4월 12일 : 어휘 클러스터를 만들고 word cloud 형태로 시각화를 수행해 봅니다. (wordcloud)
  
 
-* 0307_main.py is under maintenance
+* 0307_main.py, 0410_main_practice.ipynb is under maintenance
 <br>
 
 | 사용한 Package | Version | 설명 |
@@ -49,3 +53,4 @@
 |   selenium     |   3.141.0   |webdriver라는 API를 통해 Chrome 등의 브라우저를 제어할 수 있으며, 주로 웹앱을 테스트하는데 이용하는 프레임워크입니다. DHTML 웹 크롤러를 만들 때 가장 많이 사용됩니다.|
 |   soupsieve     |   1.8   |beautifulsoup4와 함께 사용되도록 만들어진 CSS selector 라이브러리입니다. modern CSS selector를 활용해 selecting, matching, filtering 등을 수행할 수 있도록 해 줍니다.|
 |   urllib3      |   1.24.1   |web의 source code를 읽어올 수 있도록 도와주는 모듈입니다. requests를 사용하면 간혹 보안으로 인하여 웹의 코드를 읽어오지 못할 수 있기 때문이며, urllib3으로 읽어온 값은 binary이므로 decoding을 한 후 beautifulsoup4으로 파싱해야 합니다.|
+|   wordcloud    |   1.5.0   |발생 빈도가 높은 품사 순으로 wordcloud를 만들어 주는 모듈입니다.(단 matplotlib처럼 한국어도 사용할 수 있도록 폰트를 설정해 주어야 합니다.) |
